@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: hsl(210, 46%, 95%);
+}
+
+.container {
+  width: 1200px;
+  height: 700px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  grid-template-areas:
+    "grad1 grad1 grad2 grad5"
+    "grad3 grad4 grad4 grad5";
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.grad-info {
+  display: flex;
+  align-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.grad-info img {
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  width: 40px;
+  height: auto;
+  margin-right: 24px;
+}
+
+.grad-4 img {
+  border: 3px solid hsl(263, 55%, 52%);
+}
+
+.grad-info h3 {
+  line-height: 1.5rem;
+}
+
+.name {
+  color: rgba(255, 255, 255, 1);
+}
+
+.verified {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.testimonial-heading {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.testimonial-sub-heading {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+}
+
+.grad-3 h3,
+.grad-5 h3 {
+  color: hsl(217, 19%, 35%);
+}
+
+.grad-3 .grad-name p,
+.grad-5 .grad-name p {
+  color: rgba(72, 85, 106, 0.5);
+}
+
+.grad-3 .testimonial-heading,
+.grad-5 .testimonial-heading {
+  color: hsl(217, 19%, 35%);
+}
+.grad-3 .testimonial-sub-heading,
+.grad-5 .testimonial-sub-heading {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+
+.grad-1 {
+  background-color: hsl(263, 55%, 52%);
+  grid-area: grad1;
+}
+.grad-2 {
+  background-color: hsl(217, 19%, 35%);
+  grid-area: grad2;
+}
+.grad-3 {
+  grid-area: grad3;
+}
+.grad-4 {
+  background-color: hsl(219, 29%, 14%);
+  grid-area: grad4;
+}
+.grad-5 {
+  grid-area: grad5;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 50px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: auto;
+  }
+  .container {
+    width: 90%;
+    height: 80%;
+    margin: 100px auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "grad1"
+      "grad2"
+      "grad3"
+      "grad4"
+      "grad5";
+  }
+
+  .attribution {
+    bottom: 20px;
+  }
+}
